@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --textcolor: white;
   --bg-url: url(assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
@@ -14,7 +14,7 @@
   --switch_bg_url: url(assets/moon-stars.svg);
 }
 
-.light{
+.light {
   --textcolor: black;
   --bg-url: url(assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
@@ -33,6 +33,7 @@ body {
   
   background: color image repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -48,8 +49,8 @@ body * {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;*/
-  
-  margin: 56px auto 0px; 
+
+  margin: 56px auto 0px;
   padding: 0 24px;
 }
 
@@ -74,7 +75,7 @@ body * {
   margin: 4px auto;
 }
 
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch_bg_url) no-repeat center;
@@ -87,12 +88,12 @@ body * {
   transform: translateY(-50%);
 }
 
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -114,7 +115,7 @@ ul {
   padding: 24px 0;
 }
 
-ul li a{
+ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,12 +137,12 @@ ul li a{
 
 /*pseudo-selector - serve para aplicar coisas quando passar o mouse por cima*/
 
-ul li a:hover{
+ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--textcolor);
 }
 
-#social-links{
+#social-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +152,7 @@ ul li a:hover{
   font-size: 24px;
 }
 
-#social-links a{
+#social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,13 +161,23 @@ ul li a:hover{
   transition: background 0.2s;
 }
 
-#social-links a:hover{
-    background: var(--highlight-color);
-
+#social-links a:hover {
+  background: var(--highlight-color);
 }
 
-footer{
-
+footer {
   text-align: center;
   padding: 24px 0;
+}
+
+/* media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
